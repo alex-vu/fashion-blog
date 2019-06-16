@@ -259,11 +259,11 @@ body {
 }
 
 .top-line {
-  top: 16px;
+  top: 8px;
 }
 
 .bottom-line {
-  bottom: 16px;
+  bottom: 9px;
 }
 
 .mobile-nav {
@@ -764,6 +764,7 @@ body {
   }
 
   .menu-toggler {
+    position: relative;
     display: flex;
     align-items: center;
   }
