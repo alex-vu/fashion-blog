@@ -53,7 +53,7 @@ body {
   --hovered-grey: #999999;
   --border-grey: #ebebeb;
   --offset-large: 121px;
-  --offset-small: 61px;
+  --offset-small: 54px;
 }
 
 /***************************** 
@@ -265,21 +265,17 @@ body {
 }
 
 .menu-toggler div {
-  position: absolute;
   width: 45px;
   height: 6px;
+  margin-bottom: 5px;
   cursor: pointer;
   border-radius: 4px;
   background-color: var(--dark-primary);
   transition: 0.3s;
 }
 
-.top-line {
-  top: 8px;
-}
-
-.bottom-line {
-  bottom: 9px;
+.menu-toggler .bottom-line {
+  margin-bottom: 0;
 }
 
 .mobile-nav {
@@ -342,7 +338,8 @@ body {
 }
 
 .slick-slide .hero-1-m,
-.slick-slide .hero-2-m {
+.slick-slide .hero-2-m,
+.slick-slide .hero-3-m {
   display: none;
 }
 
@@ -728,10 +725,6 @@ body {
 }
 
 @media only screen and (max-width: 1200px) {
-  .hero-bg {
-    height: 600px;
-  }
-
   .news-desc {
     padding: 50px 25px;
   }
@@ -754,22 +747,6 @@ body {
     padding-top: var(--offset-small);
   }
 
-  .slick-slide .hero-1,
-  .slick-slide .hero-2 {
-    display: none;
-  }
-
-  .slick-slide .hero-1-m,
-  .slick-slide .hero-2-m {
-    display: block;
-    height: auto;
-  }
-
-  .mobile-nav-list {
-    overflow: scroll;
-    max-height: 25rem;
-  }
-
   .is-mobile-nav {
     justify-content: space-between;
   }
@@ -781,14 +758,16 @@ body {
 
   .logo {
     position: static;
-    height: 60px;
-    line-height: 60px;
+    height: var(--offset-small);
+    line-height: var(--offset-small);
+    font-size: 1.5rem;
   }
 
   .menu-toggler {
     position: relative;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
   .filter-inner {
@@ -862,6 +841,25 @@ body {
 @media only screen and (max-width: 840px) {
   .container {
     width: 95%;
+  }
+
+  .slick-slide .hero-1,
+  .slick-slide .hero-2,
+  .slick-slide .hero-3 {
+    display: none;
+  }
+
+  .slick-slide .hero-1-m,
+  .slick-slide .hero-2-m,
+  .slick-slide .hero-3-m {
+    display: block;
+    height: auto;
+  }
+
+  .slick-dots button,
+  .slick-dots li {
+    width: 30px;
+    height: 3.4px;
   }
 
   .slick-dots {
