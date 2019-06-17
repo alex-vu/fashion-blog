@@ -820,11 +820,20 @@ body {
     position: relative;
   }
 
+  .disable-scrollbars::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+  }
+
+  .disable-scrollbars {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+
   .filter-list {
     justify-content: flex-start;
     flex-wrap: nowrap;
     overflow-x: scroll;
-    overflow: hidden;
     user-select: none;
     cursor: pointer;
   }
