@@ -52,6 +52,7 @@ body {
   --grey: #777777;
   --hovered-grey: #999999;
   --border-grey: #ebebeb;
+  --offsetHeight: 8rem;
 }
 
 /***************************** 
@@ -69,6 +70,11 @@ body {
 .flex-ac {
   display: flex;
   align-items: center;
+}
+
+.flex-sp {
+  display: flex;
+  justify-content: space-between;
 }
 
 .hidden {
@@ -111,7 +117,7 @@ body {
   right: 0;
   width: 100%;
   z-index: 100;
-  height: 8rem;
+  height: var(--offsetHeight);
 }
 
 /*  navbar top  */
@@ -145,6 +151,7 @@ body {
   left: 21px;
   display: inline-block;
   color: inherit;
+  line-height: 1;
 }
 
 .login a,
@@ -156,6 +163,10 @@ body {
 .login {
   position: absolute;
   right: 180px;
+}
+
+.login svg {
+  margin-left: 5px;
 }
 
 .lang {
@@ -325,6 +336,11 @@ body {
   overflow: hidden;
 }
 
+.slick-slide .hero-1-m,
+.slick-slide .hero-2-m {
+  display: none;
+}
+
 .hero-1 {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
     url(../images/slider-1.jpeg);
@@ -456,8 +472,6 @@ body {
 }
 
 .news-image {
-  /* max-height: 346px;
-    overflow: hidden; */
   width: 100%;
   height: 0;
   padding-bottom: 76%;
@@ -566,9 +580,11 @@ body {
   display: block;
   width: 40px;
   height: 40px;
-  line-height: 38px;
   border: 2px solid currentColor;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /***************************** 
@@ -657,6 +673,26 @@ body {
   border-color: var(--light);
 }
 
+.facebook-icon svg {
+  max-width: 10px;
+  height: 30px;
+}
+
+.twitter-icon svg {
+  max-width: 19px;
+  height: 30px;
+}
+
+.pinterest-icon svg {
+  max-width: 16px;
+  height: 30px;
+}
+
+.envelope-icon svg {
+  max-width: 20px;
+  height: 30px;
+}
+
 /*  footer bottom  */
 .footer-bottom {
   background: #171717;
@@ -703,7 +739,6 @@ body {
 
 .go-top span {
   opacity: 0.5;
-  margin-top: 5px;
   transition: 0.15s;
 }
 
@@ -720,6 +755,10 @@ body {
     width: 95%;
   }
 
+  .hero-bg {
+    height: 700px;
+  }
+
   .news-item {
     padding: 0 10px 25.5px;
   }
@@ -734,6 +773,10 @@ body {
 }
 
 @media only screen and (max-width: 1200px) {
+  .hero-bg {
+    height: 600px;
+  }
+
   .news-desc {
     padding: 50px 25px;
   }
@@ -746,6 +789,10 @@ body {
 @media only screen and (max-width: 1024px) {
   .container {
     width: 80%;
+  }
+
+  .hero-bg {
+    height: 500px;
   }
 
   .is-mobile-nav {
@@ -769,6 +816,51 @@ body {
     align-items: center;
   }
 
+  .filter-inner {
+    position: relative;
+  }
+
+  .filter-list {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .bg-fade {
+    position: absolute;
+    top: 0;
+    right: -1px;
+    height: 46px;
+    width: 50px;
+    z-index: 1;
+    background: -moz-linear-gradient(
+      right,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.58) 42%,
+      rgba(255, 255, 255, 0.31) 69%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+      right,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.58) 42%,
+      rgba(255, 255, 255, 0.31) 69%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.58) 42%,
+      rgba(255, 255, 255, 0.31) 69%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    pointer-events: none;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+  }
+
   .news-list {
     margin: 0;
   }
@@ -788,16 +880,37 @@ body {
     width: 95%;
   }
 
-  .hero-bg {
-    height: 400px;
+  .hero-1,
+  .hero-2 {
+    display: none;
+  }
+
+  .slick-slide .hero-1-m,
+  .slick-slide .hero-2-m {
+    display: block;
+    height: auto;
   }
 
   .btn-login {
     margin-right: 2%;
   }
 
+  .filter {
+    margin-top: 42px;
+  }
+
+  .filter-item a {
+    width: 170px;
+    font-size: 18px;
+    line-height: 40px;
+    padding: 0 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
   .news-list {
     margin: 0 -5px;
+    padding-bottom: 60px;
   }
 
   .news-title {
@@ -810,7 +923,8 @@ body {
   }
 
   .news-item {
-    padding: 0 5px 25.5px;
+    padding: 0 5px 10px;
+    margin-bottom: 2%;
   }
 
   .news-desc {

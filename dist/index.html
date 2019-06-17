@@ -9,12 +9,29 @@
       href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
     <header class="header-root fixed-top">
       <nav class="navbar-top flex-ac">
-        <div class="home-icon"><i class="fas fa-home"></i></div>
+        <div class="home-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              fill="currentColor"
+              d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"
+            />
+          </svg>
+        </div>
         <div class="container">
           <div class="nav-menu top-wrapper">
             <li class="navtop-item active-item"><a href="#">Juno Hair</a></li>
@@ -25,7 +42,26 @@
             <li class="navtop-item"><a href="#">My Juno</a></li>
           </div>
         </div>
-        <div class="login"><a href="#">login</a></div>
+        <div class="login">
+          <a class="flex-ac" href="#"
+            >login
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <g fill="none">
+                <path d="M0 0h24v24H0V0z" />
+                <path opacity=".87" d="M0 0h24v24H0V0z" />
+              </g>
+              <path
+                fill="currentColor"
+                d="M20 8h-3V6.21c0-2.61-1.91-4.94-4.51-5.19C9.51.74 7 3.08 7 6v2H4v14h16V8zm-8 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9z"
+              />
+            </svg>
+          </a>
+        </div>
         <div class="lang"><a href="#">Korean</a></div>
       </nav>
 
@@ -64,30 +100,35 @@
       <ul class="hero hero-slider">
         <li>
           <div class="hero-1 hero-bg"></div>
+          <img class="hero-1-m" src="images/slider-1.jpeg" alt="" />
         </li>
         <li>
           <div class="hero-2 hero-bg"></div>
+          <img class="hero-2-m" src="images/slider-2.jpeg" alt="" />
         </li>
       </ul>
       <section class="filter">
         <div class="container">
-          <ul class="filter-list">
-            <li class="filter-item active-filter">
-              <a href="#">All</a>
-            </li>
-            <li class="filter-item">
-              <a href="#">Hot Issue</a>
-            </li>
-            <li class="filter-item">
-              <a href="#">Style Trend Lab</a>
-            </li>
-            <li class="filter-item">
-              <a href="#">Tip</a>
-            </li>
-            <li class="filter-item">
-              <a href="#">Juno Man</a>
-            </li>
-          </ul>
+          <div class="filter-inner">
+            <ul class="filter-list">
+              <li class="filter-item active-filter">
+                <a href="#">All</a>
+              </li>
+              <li class="filter-item">
+                <a href="#">Hot Issue</a>
+              </li>
+              <li class="filter-item">
+                <a href="#">Style Trend Lab</a>
+              </li>
+              <li class="filter-item">
+                <a href="#">Tip</a>
+              </li>
+              <li class="filter-item">
+                <a href="#">Juno Man</a>
+              </li>
+            </ul>
+            <span class="bg-fade"></span>
+          </div>
         </div>
       </section>
       <section class="news">
@@ -109,10 +150,20 @@
                     Magni error soluta excepturi tempora suscipit distinctio
                     labore unde ratione modi laboriosam ut sit alias.
                   </p>
-                  <a class="news-link" href="#"
+                  <a class="news-link" href="blog-detail.html"
                     >Learn more
                     <span class="circular-arrow"
-                      ><i class="fas fa-arrow-right"></i></span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                          fill="currentColor"
+                          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+                        /></svg></span
                   ></a>
                 </div>
               </div>
@@ -133,10 +184,20 @@
                     Magni error soluta excepturi tempora suscipit distinctio
                     labore unde ratione modi laboriosam ut sit alias.
                   </p>
-                  <a class="news-link" href="#"
+                  <a class="news-link" href="blog-detail.html"
                     >Learn more
                     <span class="circular-arrow"
-                      ><i class="fas fa-arrow-right"></i></span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                          fill="currentColor"
+                          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+                        /></svg></span
                   ></a>
                 </div>
               </div>
@@ -157,10 +218,20 @@
                     Magni error soluta excepturi tempora suscipit distinctio
                     labore unde ratione modi laboriosam ut sit alias.
                   </p>
-                  <a class="news-link" href="#"
+                  <a class="news-link" href="blog-detail.html"
                     >Learn more
                     <span class="circular-arrow"
-                      ><i class="fas fa-arrow-right"></i></span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                          fill="currentColor"
+                          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+                        /></svg></span
                   ></a>
                 </div>
               </div>
@@ -183,10 +254,20 @@
                     Magni error soluta excepturi tempora suscipit distinctio
                     labore unde ratione modi laboriosam ut sit alias.
                   </p>
-                  <a class="news-link" href="#"
+                  <a class="news-link" href="blog-detail.html"
                     >Learn more
                     <span class="circular-arrow"
-                      ><i class="fas fa-arrow-right"></i></span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                          fill="currentColor"
+                          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+                        /></svg></span
                   ></a>
                 </div>
               </div>
@@ -207,10 +288,20 @@
                     Magni error soluta excepturi tempora suscipit distinctio
                     labore unde ratione modi laboriosam ut sit alias.
                   </p>
-                  <a class="news-link" href="#"
+                  <a class="news-link" href="blog-detail.html"
                     >Learn more
                     <span class="circular-arrow"
-                      ><i class="fas fa-arrow-right"></i></span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                          fill="currentColor"
+                          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+                        /></svg></span
                   ></a>
                 </div>
               </div>
@@ -231,10 +322,20 @@
                     Magni error soluta excepturi tempora suscipit distinctio
                     labore unde ratione modi laboriosam ut sit alias.
                   </p>
-                  <a class="news-link" href="#"
+                  <a class="news-link" href="blog-detail.html"
                     >Learn more
                     <span class="circular-arrow"
-                      ><i class="fas fa-arrow-right"></i></span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path
+                          fill="currentColor"
+                          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+                        /></svg></span
                   ></a>
                 </div>
               </div>
@@ -264,10 +365,62 @@
             <div class="social-medias flex-ac">
               <h4 class="social-title">Juno Social Media</h4>
               <div class="social-wrapper">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a class="facebook-icon" href="#"
+                  ><svg
+                    width="264"
+                    height="512"
+                    viewBox="0 0 264 512"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M76.7 512V283H0V192H76.7V120.3C76.7 42.4 124.3 0 193.8 0C227.1 0 255.7 2.5 264 3.6V85H215.8C178 85 170.7 103 170.7 129.3V192H256L244.3 283H170.7V512"
+                    />
+                  </svg>
+                </a>
+                <a class="twitter-icon" href="#"
+                  ><svg
+                    width="512"
+                    height="416"
+                    viewBox="0 0 512 416"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M459.37 103.634C459.695 108.182 459.695 112.731 459.695 117.279C459.695 255.999 354.112 415.837 161.137 415.837C101.685 415.837 46.457 398.618 0 368.731C8.447 369.705 16.568 370.03 25.34 370.03C74.395 370.03 119.553 353.462 155.614 325.198C109.482 324.223 70.822 294.01 57.502 252.426C64 253.4 70.497 254.05 77.32 254.05C86.741 254.05 96.163 252.75 104.934 250.477C56.853 240.73 20.791 198.497 20.791 147.492V146.193C34.76 153.99 51.005 158.863 68.222 159.512C39.958 140.669 21.441 108.507 21.441 72.121C21.441 52.629 26.638 34.761 35.735 19.167C87.39 82.842 165.035 124.425 252.1 128.974C250.476 121.177 249.501 113.056 249.501 104.934C249.501 47.106 296.283 7.32422e-07 354.435 7.32422e-07C384.648 7.32422e-07 411.937 12.67 431.105 33.137C454.82 28.589 477.561 19.817 497.704 7.797C489.906 32.163 473.338 52.63 451.572 65.624C472.689 63.351 493.156 57.502 511.998 49.381C497.706 70.172 479.837 88.689 459.37 103.634Z"
+                    />
+                  </svg>
+                </a>
+                <a class="pinterest-icon" href="#"
+                  ><svg
+                    width="384"
+                    height="500"
+                    viewBox="0 0 384 500"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M204 0C101.4 0 0 68.4 0 179.1C0 249.5 39.6 289.5 63.6 289.5C73.5 289.5 79.2 261.9 79.2 254.1C79.2 244.8 55.5 225 55.5 186.3C55.5 105.9 116.7 48.9 195.9 48.9C264 48.9 314.4 87.6 314.4 158.7C314.4 211.8 293.1 311.4 224.1 311.4C199.2 311.4 177.9 293.4 177.9 267.6C177.9 229.8 204.3 193.2 204.3 154.2C204.3 88 110.4 100 110.4 180C110.4 196.8 112.5 215.4 120 230.7C106.2 290.1 78 378.6 78 439.8C78 458.7 80.7 477.3 82.5 496.2C85.9 500 84.2 499.6 89.4 497.7C139.8 428.7 138 415.2 160.8 324.9C173.1 348.3 204.9 360.9 230.1 360.9C336.3 360.9 384 257.4 384 164.1C384 64.8 298.2 0 204 0Z"
+                    />
+                  </svg>
+                </a>
+                <a class="envelope-icon" href="#"
+                  ><svg
+                    width="512"
+                    height="384"
+                    viewBox="0 0 512 384"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M502.3 126.8C506.2 123.7 512 126.6 512 131.5V336C512 362.5 490.5 384 464 384H48C21.5 384 0 362.5 0 336V131.6C0 126.6 5.7 123.8 9.7 126.9C32.1 144.3 61.8 166.4 163.8 240.5C184.9 255.9 220.5 288.3 256 288.1C291.7 288.4 328 255.3 348.3 240.5C450.3 166.4 479.9 144.2 502.3 126.8ZM256 256C279.2 256.4 312.6 226.8 329.4 214.6C462.1 118.3 472.2 109.9 502.8 85.9C508.6 81.4 512 74.4 512 67V48C512 21.5 490.5 0 464 0H48C21.5 0 0 21.5 0 48V67C0 74.4 3.4 81.3 9.2 85.9C39.8 109.8 49.9 118.3 182.6 214.6C199.4 226.8 232.8 256.4 256 256Z"
+                    />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -286,11 +439,22 @@
       </footer>
     </main>
     <a class="go-top" href="#"
-      ><span><i class="fas fa-arrow-up"></i></span><span>Top</span></a
+      ><span
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path fill="none" d="M0 0h24v24H0V0z" />
+          <path
+            fill="currentColor"
+            d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"
+          /></svg></span
+      ><span>Top</span></a
     >
 
-    <script src="https://kit.fontawesome.com/bfed3e0f94.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script> -->
     <script src="js/main.min.js"></script>
   </body>
 </html>
