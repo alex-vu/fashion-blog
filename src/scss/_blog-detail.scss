@@ -1,0 +1,132 @@
+.page-offset {
+  margin-top: var(--offsetHeight);
+}
+
+.offset-top {
+  padding-bottom: 7.77778%;
+}
+
+.blog-detail {
+  line-height: 2.15385;
+}
+
+/***************************** 
+   *  BLOG CONTENT
+   *****************************/
+
+.blog-content {
+  flex: 0 0 65%;
+}
+
+.blog-entry-header {
+  margin-bottom: 40px;
+}
+
+.blog-type {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.blog-title {
+  font-size: 1.625rem;
+  line-height: 1.53846;
+  font-weight: 400;
+}
+
+.blog-texts {
+  margin-top: 6.41026%;
+  margin-bottom: 11.53846%;
+}
+
+.blog-texts-title {
+  margin-top: 2.15385em;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: black;
+}
+
+.blog-content p {
+  margin-top: 2.15385em;
+}
+
+.dialogue {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.blog-images {
+  margin-top: 2.15385em;
+}
+
+.blog-images-caption {
+  font-size: 0.75rem;
+  line-height: 1.66667;
+  color: #969696;
+  margin-top: 0.66667em;
+}
+
+/***************************** 
+   *  EXTRA ARTICLES
+   *****************************/
+
+.extra-blog {
+  flex: 0 0 25%;
+}
+
+.extra-title {
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  line-height: 1.33333;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+
+.extra-inner {
+  margin-top: 30px;
+  display: block;
+}
+
+.extra-content {
+  padding-top: 15px;
+}
+
+.extra-type {
+  font-size: 0.85rem;
+  color: #969696;
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+  margin-bottom: 5px;
+}
+
+.extra-text {
+  font-size: 0.88rem;
+  line-height: 1.44444;
+  margin-top: 5px;
+  color: black;
+}
+
+/***************************** 
+   *  MEDIA QUERIES
+   *****************************/
+
+//   @media only screen and (max-width: 1500px) {
+
+//   }
+
+//   @media only screen and (max-width: 1200px) {
+
+//   }
+
+//   @media only screen and (max-width: 1024px) {
+
+//   }
+
+//   @media only screen and (max-width: 840px) {
+
+//   }

@@ -6,6 +6,13 @@ $(document).ready(function() {
   /* Elements */
   const menuToggler = document.querySelector(".menu-toggler");
   const mobileNav = document.querySelector(".mobile-nav");
+  const heroSlider = document.querySelector(".hero-slider");
+  const filterItems = document.querySelector(".filter-list");
+  const filterItem = document.querySelectorAll(".filter-item");
+
+  let isDown = false;
+  let startX;
+  let scrollLeft;
 
   /* Functions */
   function toggleMobileNav() {
@@ -34,19 +41,51 @@ $(document).ready(function() {
   menuToggler.addEventListener("click", toggleMobileNav);
   window.addEventListener("resize", hideMobileNav);
 
-  /* init */
-  $(".hero-slider").slick({
-    cssEase: "ease-in-out",
-    autoplay: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true
+  filterItems.addEventListener("mousedown", e => {
+    isDown = true;
+    startX = e.pageX - filterItems.offsetLeft;
+    scrollLeft = filterItems.scrollLeft;
   });
+
+  filterItems.addEventListener("mouseleave", () => {
+    isDown = false;
+  });
+
+  filterItems.addEventListener("mouseup", () => {
+    isDown = false;
+  });
+
+  filterItems.addEventListener("mousemove", e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - filterItems.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    filterItems.scrollLeft = scrollLeft - walk;
+  });
+
+  for (let i = 0; i < filterItem.length; i++) {
+    filterItem[i].addEventListener("click", e => {
+      e.preventDefault();
+    });
+  }
+
+  /* init */
+  if (heroSlider) {
+    $(".hero-slider").slick({
+      cssEase: "ease-in-out",
+      autoplay: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true
+    });
+  }
 
   /* Removes slider from stuttering when resizing browser */
   $(window).resize(function() {
-    $(".hero-slider")[0].slick.refresh();
+    if (heroSlider) {
+      $(".hero-slider")[0].slick.refresh();
+    }
   });
 
   /*****************************
