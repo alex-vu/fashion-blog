@@ -73,9 +73,12 @@ $(document).ready(function() {
   if (heroSlider) {
     $(".hero-slider").slick({
       lazyload: "ondemand",
-      cssEase: "ease-in-out",
-      autoplay: true,
       infinite: true,
+      autoplaySpeed: 4000,
+      speed: 1500,
+      fade: true,
+      cssEase: "linear",
+      autoplay: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       dots: true
