@@ -72,6 +72,7 @@ $(document).ready(function() {
   /* init */
   if (heroSlider) {
     $(".hero-slider").slick({
+      lazyload: "ondemand",
       cssEase: "ease-in-out",
       autoplay: true,
       infinite: true,
