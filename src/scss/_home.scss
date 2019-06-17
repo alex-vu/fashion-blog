@@ -52,7 +52,8 @@ body {
   --grey: #777777;
   --hovered-grey: #999999;
   --border-grey: #ebebeb;
-  --offsetHeight: 8rem;
+  --offset-large: 121px;
+  --offset-small: 61px;
 }
 
 /***************************** 
@@ -79,6 +80,10 @@ body {
 
 .hidden {
   visibility: hidden !important;
+}
+
+.spacing-top {
+  padding-top: var(--offset-large);
 }
 
 /***************************** 
@@ -117,7 +122,7 @@ body {
   right: 0;
   width: 100%;
   z-index: 100;
-  height: var(--offsetHeight);
+  height: var(--offset-large);
 }
 
 /*  navbar top  */
@@ -341,58 +346,12 @@ body {
   display: none;
 }
 
-.hero-1 {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-    url(../images/slider-1.jpeg);
-  background-position: center 15%;
-}
-
-.hero-2 {
-  background: url(../images/slider-2.jpeg);
-  background-position: center 35%;
-}
-
-.hero-bg {
-  width: 100vw;
-  height: 800px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.hero-title-1 {
-  font-size: 44px;
-  color: var(--primary);
-}
-
-.hero-title-2 {
-  font-size: 55px;
-  color: var(--light);
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  margin-bottom: 30px;
-}
-
-.hero-cta {
-  color: var(--light);
-  background-color: var(--primary);
-  padding: 10px 30px;
-  transition: background-color ease 0.3s;
-}
-
-.hero-cta:hover {
-  background-color: var(--dark-primary);
-}
-
 .slick-slide img {
   width: 100%;
 }
 
 .slick-dots {
-  bottom: 50px;
+  bottom: 6%;
 }
 
 .slick-dots button::before {
@@ -755,10 +714,6 @@ body {
     width: 95%;
   }
 
-  .hero-bg {
-    height: 700px;
-  }
-
   .news-item {
     padding: 0 10px 25.5px;
   }
@@ -791,8 +746,28 @@ body {
     width: 80%;
   }
 
-  .hero-bg {
-    height: 500px;
+  .fixed-top {
+    height: var(--offset-small);
+  }
+
+  .spacing-top {
+    padding-top: var(--offset-small);
+  }
+
+  .slick-slide .hero-1,
+  .slick-slide .hero-2 {
+    display: none;
+  }
+
+  .slick-slide .hero-1-m,
+  .slick-slide .hero-2-m {
+    display: block;
+    height: auto;
+  }
+
+  .mobile-nav-list {
+    overflow: scroll;
+    max-height: 25rem;
   }
 
   .is-mobile-nav {
@@ -889,15 +864,8 @@ body {
     width: 95%;
   }
 
-  .hero-1,
-  .hero-2 {
-    display: none;
-  }
-
-  .slick-slide .hero-1-m,
-  .slick-slide .hero-2-m {
-    display: block;
-    height: auto;
+  .slick-dots {
+    bottom: 15px;
   }
 
   .btn-login {
@@ -1016,5 +984,3 @@ body {
     text-align: center;
   }
 }
-
-/* test */
